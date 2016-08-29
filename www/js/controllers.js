@@ -1,6 +1,70 @@
 angular.module('starter.controllers', [])
 
-.controller('StoryCtrl', function($scope) {})
+.controller('StoryCtrl', function($scope) {
+  $scope.images = [
+    {
+      'url' : './img/00.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/01.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/04.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/05.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/06.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/07.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/08.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/09.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/10.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/11.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/12.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/13.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/14.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/15.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/16.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/17.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/18.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/19.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/20.jpg',
+      'title' : '사진'
+    },{
+      'url' : './img/21.jpg',
+      'title' : '사진'
+    }
+  ]
+})
 .controller('GalleryCtrl', function($scope) {})
 
 .controller('CommentCtrl', function($scope, Chats) {

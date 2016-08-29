@@ -7,8 +7,14 @@
         <p>10월 15일 결혼합니다</p>
       </div>
 
-      <div class="item item-image">
-        <img src="../img/wedding.jpg">
+      <div class="list card" ng-repeat="image in images">
+        <div class="item item-image">
+          <img ng-src="{{image.url}}">
+        </div>
+        <a class="item item-icon-left assertive" href="#">
+          <i class="icon ion-music-note"></i>
+          {{image.title}}
+        </a>
       </div>
 
     </div>

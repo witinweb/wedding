@@ -1,23 +1,20 @@
 <ion-view view-title="우리결혼해요">
   <ion-content class="padding">
     <div class="list card">
-
-      <div class="item item-body">
+      <div class="item item-body text-center">
         <h2>안정우♥김현정</h2>
         <p>10월 15일 결혼합니다</p>
       </div>
-
-      <div class="list card" ng-repeat="image in images">
-        <div class="item item-image">
-          <img ng-src="{{image.url}}">
-        </div>
-        <a class="item item-icon-left assertive" href="#">
-          <i class="icon ion-music-note"></i>
-          {{image.title}}
-        </a>
-      </div>
-
     </div>
-    <img src="http://i1.cartoon.daumcdn.net/svc/image/U03/cartoon/57AC8441023E560001" width="100%">
+    <div class="list card" ng-repeat="image in images">
+      <div class="item item-image">
+        <img ng-src="{{image.url}}" ng-alt="{{image.title}}">
+      </div>
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        {{image.title}}
+      </a>
+    </div>
+    <a class="button button-full button-positive" href="/#/tab/location">Location</a>
   </ion-content>
 </ion-view>

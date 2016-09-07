@@ -5,3 +5,5 @@ node_modules/
 platforms/
 plugins/
 .idea/
+
+www/img/.DS_Store

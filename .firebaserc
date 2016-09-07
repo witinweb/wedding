@@ -1,5 +1,6 @@
 {
   "projects": {
-    "wedding": "wedding-bea5f"
+    "wedding": "wedding-bea5f",
+    "default": "wedding-bea5f"
   }
 }

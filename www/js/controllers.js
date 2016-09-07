@@ -75,7 +75,7 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
+  $scope.fbComments = 'https://wedding-bea5f.firebaseapp.com/#/tab/comment';
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);

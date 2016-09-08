@@ -1,3 +1,5 @@
 /* Empty. Add your own CSS if you like */
-
+.bar.bar-positive {
+    background-color: #94ad05!important;
+}
 .main-image img { width: 100%; }

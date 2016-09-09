@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>정우♥현정</title>
+    <title>정우♥현정 우리 결혼해요 10.15</title>
+
+    <meta property="og:url" content="https://wedding-bea5f.firebaseapp.com/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="정우♥현정 우리 결혼해요 10.15" />
+    <meta property="og:description"  content="2016년 10월 15일 서울대 호암 교수회관" />
+    <meta property="og:site_name" content="정우♥현정 온라인 청첩장" />
+    <meta property="og:image" content="https://wedding-bea5f.firebaseapp.com/img/fb_thumbnail.jpg" />
+    <meta property="fb:app_id" content="121998754914131" />
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -22,13 +30,23 @@
   </head>
   <body ng-app="starter">
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.7&appId=121998754914131";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '121998754914131',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/ko_KR/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--
       The nav bar that will be updated as we navigate between views.
     -->

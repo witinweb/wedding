@@ -75,16 +75,39 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  $scope.fbComments = 'https://wedding-bea5f.firebaseapp.com/#/tab/comment';
-  $scope.fbOrderBy = 'reverse_time';
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+  $scope.fbComments = 'http://developers.facebook.com/docs/plugins/comments/';
 })
 
 .controller('LocationCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
+  };
+})
+.directive('fbCommentBox', function() {
+  function createHTML(href, numposts, colorscheme, width, order) {
+    return '<div class="fb-comments" ' +
+      'data-href="' + href + '" ' +
+      'data-numposts="' + numposts + '" ' +
+      'data-colorsheme="' + colorscheme + '" ' +
+      'data-width="' + width + '">' +
+      'data-order_by="' + order +'">' +
+      '</div>';
+  }
+  return {
+    restrict: 'A',
+    scope: {},
+    link: function postLink(scope, elem, attrs) {
+      attrs.$observe('pageHref', function(newValue) {
+        var href = newValue;
+        var numposts = attrs.numposts || 5;
+        var colorscheme = attrs.colorscheme || 'light';
+        var width = attrs.width || '100%';
+        var order = attrs.orderBy || 'reverse_time';
+        elem.html(createHTML(href, numposts, colorscheme, width, order));
+        if(typeof FB !== 'undefined') {
+          FB.XFBML.parse(elem[0]);
+        }
+      });
+    }
   };
 });

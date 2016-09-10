@@ -3,3 +3,7 @@
     background-color: #94ad05!important;
 }
 .main-image img { width: 100%; }
+.iframe-scroll{
+  -webkit-overflow-scrolling: touch !important;
+  overflow: scroll !important;
+}

@@ -90,7 +90,7 @@ angular.module('starter.controllers', [])
       'data-numposts="' + numposts + '" ' +
       'data-colorsheme="' + colorscheme + '" ' +
       'data-width="' + width + '">' +
-      'data-order_by="' + order +'">' +
+      'data-order-by="' + order +'">' +
       '</div>';
   }
   return {

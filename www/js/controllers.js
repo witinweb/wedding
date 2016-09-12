@@ -9,12 +9,6 @@ angular.module('starter.controllers', [])
       'url' : './img/01.jpg',
       'title' : '사진'
     },{
-      'url' : './img/04.jpg',
-      'title' : '사진'
-    },{
-      'url' : './img/05.jpg',
-      'title' : '사진'
-    },{
       'url' : './img/06.jpg',
       'title' : '사진'
     },{

@@ -79,11 +79,12 @@ angular.module('starter.controllers', [])
 })
 .directive('fbCommentBox', function() {
   function createHTML(href, numposts, colorscheme, width, order) {
+    console.log('order:', order);
     return '<div class="fb-comments" ' +
       'data-href="' + href + '" ' +
       'data-numposts="' + numposts + '" ' +
       'data-colorsheme="' + colorscheme + '" ' +
-      'data-width="' + width + '">' +
+      'data-width="' + width + '"' +
       'data-order-by="' + order +'">' +
       '</div>';
   }
@@ -96,7 +97,7 @@ angular.module('starter.controllers', [])
         var numposts = attrs.numposts || 5;
         var colorscheme = attrs.colorscheme || 'light';
         var width = attrs.width || '100%';
-        var order = attrs.orderBy || 'reverse_time';
+        var order = 'reverse_time';
         elem.html(createHTML(href, numposts, colorscheme, width, order));
         if(typeof FB !== 'undefined') {
           FB.XFBML.parse(elem[0]);
